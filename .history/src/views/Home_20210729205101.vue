@@ -7,14 +7,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { Options, Vue } from 'vue-class-component'
 
-export default defineComponent({
-  name: 'home',
-  setup() {
-    return
-  }
+@Options({
+  components: {}
 })
+export default class Home extends Vue {}
 </script>
 <style lang="scss" scoped>
 .gs {
