@@ -1,6 +1,8 @@
 <template>
   <div class="container w-full h-full">
-    <div class="content_box w-full"></div>
+    <div class="content_box w-full">
+      <router-view></router-view>
+    </div>
     <footer class="flex justify-center items-center">
       <div class="flex justify-center items-center">
         <span class="text-sm text-gray-500">版本：v2.0.0</span>
@@ -11,9 +13,7 @@
           href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44162402000025"
         >
           <img src="@/assets/images/gongan.png" alt />
-          <span class="ml-1 text-sm text-gray-500"
-            >粤公网安备44162402000025号</span
-          >
+          <span class="ml-1 text-sm text-gray-500">粤公网安备44162402000025号</span>
         </a>
       </div>
     </footer>
@@ -21,13 +21,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 export default defineComponent({
-  name: "App",
+  name: 'App',
   setup() {
-    return;
-  },
-});
+    return
+  }
+})
 </script>
 
 <style lang="scss" scoped>
