@@ -3,6 +3,7 @@
 </template>
 
 <style lang="scss">
+@import url("https://at.alicdn.com/t/font_2715113_ts6hd3fd63.css");
 html,
 body {
   height: 100vh;
