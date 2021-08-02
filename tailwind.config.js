@@ -13,6 +13,7 @@ module.exports = {
       '2xl': '1536px',
     },
     colors: {
+      primary: "#889EC9",
       transparent: 'transparent',
       current: 'currentColor',
 

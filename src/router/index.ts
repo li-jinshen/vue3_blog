@@ -3,10 +3,15 @@ import Home from '../views/Home.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: '/',
+    path: "/",
+    redirect: "/blog/home"
+  },
+  {
+    path: '/blog/home',
     name: 'Home',
     component: Home
-  }
+  },
+
 ]
 
 const router = createRouter({
