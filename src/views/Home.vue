@@ -2,7 +2,7 @@
   <div class="home">
     <!-- <img alt="Vue logo" src="../assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>-->
-    <p class="gs red">asdfasdf</p>
+    <!-- <p class="gs red">asdfasdf</p> -->
   </div>
 </template>
 

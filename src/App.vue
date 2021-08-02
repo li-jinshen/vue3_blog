@@ -1,5 +1,5 @@
 <template>
-  <p class="text-purple-700 text-opacity-100">The quick brown fox</p>
+  <p class="text-purple-700 text-opacity-100"></p>
 </template>
 
 <style lang="scss">
