@@ -1,13 +1,17 @@
 <template>
-  <div class="home w-full h-full flex justify-center items-center">
-    <div class="box flex items-center">
+  <div class="home w-full h-full relative">
+    <div class="box flex items-center absolute top-1/2 left-1/2">
       <div class="left">
         <div class="info rounded">
           <info></info>
         </div>
-        <div class="menu rounded"></div>
+        <div class="menu rounded">
+          <Menu></Menu>
+        </div>
       </div>
-      <div class="right rounded"></div>
+      <div class="right rounded">
+        <Content></Content>
+      </div>
     </div>
   </div>
 </template>
@@ -15,13 +19,17 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import Info from './home/components/Info.vue'
+import Content from './home/components/Content.vue'
+import Menu from './home/components/Menu.vue'
 export default defineComponent({
   name: 'home',
   setup() {
     return
   },
   components: {
-    Info
+    Info,
+    Content,
+    Menu
   }
 })
 </script>
@@ -32,10 +40,10 @@ export default defineComponent({
   background-size: cover;
   .box {
     height: 600px;
-    width: 900px;
+    transform: translate(-50%, -50%);
     .left {
-      width: 200px;
       & > div {
+        width: 200px;
         background: rgba(255, 255, 255, 0.4);
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         backdrop-filter: blur(13.5px);
@@ -43,16 +51,15 @@ export default defineComponent({
         border: 1px solid rgba(255, 255, 255, 0.18);
       }
       .info {
-        height: 200px;
-        width: 200px;
+        height: 180px;
       }
       .menu {
-        height: 390px;
+        height: 410px;
         margin-top: 10px;
       }
     }
     .right {
-      width: 690px;
+      width: 790px;
       margin-left: 10px;
       height: 100%;
       background: rgba(255, 255, 255, 0.25);
