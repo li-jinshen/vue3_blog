@@ -37,6 +37,7 @@ export default defineComponent({
 .content_box {
   height: calc(100% - 40px);
   overflow-y: scroll;
+  padding-left: 10px;
 }
 footer {
   height: 40px;

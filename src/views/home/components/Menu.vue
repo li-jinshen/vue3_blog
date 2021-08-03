@@ -2,18 +2,18 @@
   <div class="container h-full">
     <ul>
       <li
-        class="flex justify-center duration-500 hover:bg-primary hover:text-white"
+        class="flex justify-center hover:bg-primary hover:text-white"
         v-for="item in menu"
         :key="item.title"
         @click="goPage(item.href)"
       >
         <span class="flex justify-start items-center">
           <span
-            class="text-gray-500 duration-500 mr-1"
+            class="text-gray-500 mr-1"
             :class="item.icon"
             :style="{ fontSize: item.size + 'px' }"
           ></span>
-          <span class="text-gray-500 duration-500">{{ item.title }}</span>
+          <span class="text-gray-500">{{ item.title }}</span>
         </span>
       </li>
     </ul>
@@ -96,16 +96,17 @@ export default defineComponent({
 li {
   height: 50px;
   line-height: 50px;
-  transition: 1000ms;
   & > span {
     width: 60%;
-    transition: 1000ms;
+
   }
   &:hover {
+
     cursor: pointer;
     // background: rgb(136, 158, 201);
     color: rgba(255, 255, 255, 0.6);
     span {
+  
       color: rgba(255, 255, 255, 0.6);
     }
   }
