@@ -1,5 +1,6 @@
 <template>
   <div class="home w-full h-full relative">
+    <TabsList></TabsList>
     <div class="box flex items-center absolute top-1/2 left-1/2">
       <div class="left">
         <div class="info rounded">
@@ -21,6 +22,7 @@ import { defineComponent } from 'vue'
 import Info from './home/components/Info.vue'
 import Content from './home/components/Content.vue'
 import Menu from './home/components/Menu.vue'
+import TabsList from './home/components/TabList.vue'
 export default defineComponent({
   name: 'home',
   setup() {
@@ -29,7 +31,8 @@ export default defineComponent({
   components: {
     Info,
     Content,
-    Menu
+    Menu,
+    TabsList
   }
 })
 </script>

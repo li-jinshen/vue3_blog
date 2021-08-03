@@ -9,35 +9,65 @@
       />
     </div>
     <transition name="search">
-      <div class="absolute result_box rounded" v-if="show">我是搜索页面</div>
+      <div class="absolute result_box rounded p-3" v-show="show">
+        <div class="item p-2 w-full flex justify-start" v-for="item in 10" :key="item">
+          <div class="sort duration-500 text-left" style="fontSize:17px">{{item}}</div>
+          <div class="item_content">
+            <p
+              class="text-left duration-500 text-gray-800 title"
+              style="fontSize:17px"
+            >开发uni-app即时聊天按时发撒地方啊沙发上大</p>
+            <p class="flex items-center mt-1">
+              <span class="text-gray-400 flex items-center w-1/2">
+                <i class="iconfont icon-riqi1 pr-1" style="fontSize:14px"></i>
+                2020-12-12
+              </span>
+              <span class="text-gray-400 flex items-center w-1/2">
+                <i class="iconfont icon-liulanliang1 pr-1"></i>
+                200
+              </span>
+              <!-- <span class="text-gray-400 flex items-center">
+                <i class="iconfont icon-leixing1 pr-1"></i>
+                uni-app
+              </span>-->
+            </p>
+          </div>
+        </div>
+        <!-- <div class="flex justify-center items-center h-full">
+          <div>
+            <img src="../../assets/images/svg/null-food.svg" style="width:150px" alt />
+            <p class="text-gray-500 text-sm mt-2">暂无数据</p>
+          </div>
+        </div>-->
+      </div>
     </transition>
   </div>
 </template>
   
   <script lang="ts">
-import { defineComponent, Ref, ref, watch } from "vue";
+import { defineComponent, Ref, ref, watch } from 'vue'
 export default defineComponent({
-  name: "Search",
+  name: 'Search',
   setup() {
-    let show: Ref<boolean> = ref(false);
-    let keyword: Ref<string> = ref("");
+    let show: Ref<boolean> = ref(false)
+    let keyword: Ref<string> = ref('')
     function changeShow(): void {
-      show.value = !show.value;
+      show.value = !show.value
     }
-    watch(keyword, (newVal, oldVal) => {
-      if (newVal !== "") {
-        show.value = true;
+    watch(keyword, (newVal) => {
+      if (newVal !== '') {
+        show.value = true
       } else {
-        show.value = false;
+        show.value = false
       }
-    });
+    })
     return {
       keyword,
       show,
-      changeShow,
-    };
-  },
-});
+      changeShow
+    }
+  }
+})
 </script>
   
   <style lang="scss" scoped>
@@ -61,34 +91,51 @@ export default defineComponent({
 }
 .result_box {
   position: absolute;
-  height: 100px;
+  height: 280px;
   width: 400px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.3);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   border: 1px solid rgba(255, 255, 255, 0.18);
   top: 60px;
-  //   left: 50%;
-  //   transform: translateX(-50%);
+  overflow-y: scroll;
+  .item {
+    transition: 0.5s;
+    .sort {
+      width: 40px;
+    }
+    .title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .item_content {
+      width: calc(100% - 40px);
+    }
+    p {
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+  & .item:not(:last-child) {
+    border-bottom: 1px solid #ccc;
+  }
+  .item:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid white;
+  }
+  .item:hover .sort {
+    color: #889ec9;
+  }
+  .item:hover .title {
+    color: #889ec9;
+  }
 }
-/* 设置进入和离开动画 */
-/* 设置持续时间和动画函数 */
-// .search-leave-active,
-// .search-enter-active {
-//   top: 60px;
-//   opacity: 1;
-//   transition: all 1s ease;
-// }
-/**
-    * 动画开始之前,和动画完成之后的元素位置
-    */
-// .search-enter,
-// .search-leave-to {
-//   top: 100px;
-//   opacity: 0;
-// }
-//search
+
 .search-enter-active,
 .search-leave-active {
   transition: all 0.6s ease;

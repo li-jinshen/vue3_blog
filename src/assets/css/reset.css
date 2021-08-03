@@ -1,9 +1,33 @@
 input {
-    background: none;
-    outline: none;
-    border: none;
+  background: none;
+  outline: none;
+  border: none;
 }
 
 input:focus {
-    border: none;
+  border: none;
+}
+
+body {
+  /* min-width: 800px; */
+  min-height: 600px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: none;
+  background: hsl(0, 0%, 80%);
+  -webkit-box-shadow: none;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  border-radius: 10px;
+  background: transparent;
+  -webkit-box-shadow: none;
 }
