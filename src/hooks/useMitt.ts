@@ -5,4 +5,4 @@
  * @FilePath: \warbler-homepage\src\hooks\useMitt.ts
  */
 import mitt, { Emitter } from 'mitt';
-export const emitter: Emitter = mitt();
+export const emitter: Emitter<any> = mitt();
