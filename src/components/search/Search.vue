@@ -93,7 +93,7 @@ export default defineComponent({
   position: absolute;
   height: 280px;
   width: 400px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(250, 250, 250, 0.9);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
@@ -104,6 +104,7 @@ export default defineComponent({
     transition: 0.5s;
     .sort {
       width: 40px;
+      height: 100%;
     }
     .title {
       overflow: hidden;
@@ -126,10 +127,11 @@ export default defineComponent({
     border-radius: 10px;
     cursor: pointer;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid transparent;
   }
   .item:hover .sort {
     color: #889ec9;
+    font-size: 26px !important;
   }
   .item:hover .title {
     color: #889ec9;

@@ -1,5 +1,5 @@
 <template>
-  <div class="container fixed top-4 right-4 z-100" style="width:40px">
+  <div class="container fixed top-4 right-4 z-50" style="width:40px">
     <div
       class="item flex justify-center items-center mb-3 duration-500"
       v-for="(item,index) in tagsList"
@@ -18,6 +18,7 @@ interface Tabs {
   icon: string
   size: number
   url?: string
+  title?:string
 }
 export default defineComponent({
   name: 'TabList',
@@ -29,20 +30,27 @@ export default defineComponent({
         url: 'https://gitee.com/ymshen'
       },
       {
-        icon: 'iconfont icon-houtai3',
+        icon: 'iconfont icon-houtai1',
         size: 23
         // url: 'https://gitee.com/ymshen'
       },
       {
-        icon: 'iconfont icon-icon_qq-circle',
-        size: 30
-        // url: 'https://gitee.com/ymshen'
+        icon: 'iconfont icon-qq1',
+        size: 25,
+        title:"2896583081@qq.com"
+        
       },
       {
-        icon: 'iconfont icon-icon_github-square',
-        size: 28,
-        url: 'https://gitee.com/ymshen'
+        icon: 'iconfont icon-github',
+        size: 26,
+        url: 'https://github.com/lijinshen-ym'
+      },
+      {
+        icon: 'iconfont icon-youxiang1',
+        size: 24,
+        title:"18824454802@163.com"
       }
+      
     ])
     return {
       tagsList
@@ -53,8 +61,8 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .item {
-  height: 40px;
-  width: 40px;
+  height: 36px;
+  width: 36px;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.4);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
