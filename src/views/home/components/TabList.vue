@@ -6,7 +6,7 @@
       :key="index"
     >
       <a :href="item.url" target="_blank">
-        <span :class="item.icon" :style="{'fontSize':item.size +'px'}"></span>
+        <span  :class="item.icon" :style="{'fontSize':item.size +'px'}"></span>
       </a>
     </div>
   </div>
@@ -73,5 +73,8 @@ export default defineComponent({
 .item:hover {
   cursor: pointer;
   transform: scale(1.1);
+}
+.iconfont{
+  color:rgba(255,255,255,.8)
 }
 </style>

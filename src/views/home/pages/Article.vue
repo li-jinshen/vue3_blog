@@ -13,15 +13,15 @@
             :key="item"
           >
             <span
-              class="sort_num iconfont icon-vip2 jin justify-center"
+              class="sort_num iconfont icon-toptenbands_icon_king jin justify-center"
               v-if="item == 1"
             ></span>
             <span
-              class="sort_num iconfont icon-vip2 yin justify-center"
+              class="sort_num iconfont icon-toptenbands_icon_king yin justify-center"
               v-else-if="item == 2"
             ></span>
             <span
-              class="sort_num iconfont icon-vip2 tong justify-center"
+              class="sort_num iconfont icon-toptenbands_icon_king tong justify-center"
               v-else-if="item == 3"
             ></span>
             <span class="sort_num text-gray-600 justify-center" v-else>{{ item }}</span>
@@ -29,7 +29,7 @@
               >uni-app蓝牙对接热敏打印机阿斯顿发送到发</span
             >
             <span class="click text-gray-500 pl-2 items-center">
- <i class="iconfont icon-liulanliang1 pr-1"></i>200</span>
+ <i class="iconfont icon-liulanliang1 pr-1"></i><span style="font-size: 14px;">200</span></span>
           </div>
         </div>
         <div class="date item_box px-2">
@@ -53,7 +53,7 @@
             ></span>
             <span class="sort_num text-gray-600 justify-center" v-else>{{ item }}</span>
             <span class="content text-gray-600">uni-app蓝牙对接热敏打印机阿斯顿发送到发</span>
-            <span class="click text-gray-500 pl-2 flex items-center"><i class="iconfont icon-riqi1 pr-1" style="fontSize:14px"></i>2020-12-12</span>
+            <span class="click text-gray-500 pl-2 flex items-center"><i class="iconfont icon-riqi1 pr-1" style="fontSize:14px"></i><span style="font-size: 14px;">2020-12-12</span></span>
           </div>
         </div>
       </div>

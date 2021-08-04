@@ -65,7 +65,7 @@ export default defineComponent({
       width: 790px;
       margin-left: 10px;
       height: 100%;
-      background: rgba(255, 255, 255, 0.25);
+      background: rgba(255, 255, 255, 0.4);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(13.5px);
       -webkit-backdrop-filter: blur(13.5px);

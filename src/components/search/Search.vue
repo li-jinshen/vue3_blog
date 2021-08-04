@@ -9,13 +9,13 @@
       />
     </div>
     <transition name="search">
-      <div class="absolute result_box rounded p-3" v-show="show">
+      <div class="absolute result_box rounded p-3 z-50" v-show="show">
         <div class="item p-2 w-full flex justify-start" v-for="item in 10" :key="item">
           <div class="sort duration-500 text-left" style="fontSize:17px">{{item}}</div>
           <div class="item_content">
             <p
-              class="text-left duration-500 text-gray-800 title"
-              style="fontSize:17px"
+              class="text-left duration-500 text-gray-600 title"
+              style="fontSize:16px"
             >开发uni-app即时聊天按时发撒地方啊沙发上大</p>
             <p class="flex items-center mt-1">
               <span class="text-gray-400 flex items-center w-1/2">
