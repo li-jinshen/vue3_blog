@@ -36,16 +36,21 @@ body {
   // background-size: 200% 200%;
   // animation: gradient-move 5s ease infinite alternate;
   // color: var(--color-text);
-  font-family: Hiragino Sans GB,Microsoft YaHei,Arial,sans-serif;
-  
+  font-family: Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
+
 }
 
 @keyframes gradient-move {
   0% {
     background-position: 0% 0%;
   }
+
   100% {
     background-position: 100% 100%;
   }
 }
-$primary:"#889EC9";
+
+:root {
+  --primary: #8394c0;
+  --borderLightColor:#EBEEF5;
+}

@@ -3,7 +3,6 @@
 </template>
 
 <style lang="scss">
-@import "./styles/index.scss";
 @import url('https://at.alicdn.com/t/font_2715113_iho5mwgpiul.css');
 html,
 body {

@@ -121,7 +121,7 @@ export default defineComponent({
     }
   }
   & .item:not(:last-child) {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--borderLightColor);
   }
   .item:hover {
     border-radius: 10px;
@@ -130,11 +130,11 @@ export default defineComponent({
     border-bottom: 1px solid transparent;
   }
   .item:hover .sort {
-    color: #889ec9;
+    color: var(--primary);
     font-size: 26px !important;
   }
   .item:hover .title {
-    color: #889ec9;
+    color: var(--primary);
   }
 }
 

@@ -150,7 +150,7 @@ li:hover::before {
   width: 30%;
 }
 .activePath {
-  background: #8394c0 !important;
+  background: var(--primary) !important;
   // background: rgba(136,158,201,.4);
   span {
     color: rgba(255, 255, 255, 0.6);
