@@ -2,19 +2,13 @@
   <div class="container h-full">
     <ul>
       <li
-        class="
-          flex
-          justify-center
-          hover:bg-linght
-          hover:text-white
-          duration-500
-        "
+        class="flex justify-center hover:text-white duration-500"
         v-for="item in menu"
         :key="item.title"
         @click="goPage(item.href)"
         :class="activePath == item.href ? 'activePath' : ''"
       >
-        <span class="flex justify-start items-center">
+        <span class="flex justify-start items-center duration-500">
           <span
             class="duration-500 text-gray-500 mr-1"
             :class="item.icon"
@@ -109,22 +103,54 @@ export default defineComponent({
   }
 }
 li {
+  // border-left: 4px solid transparent;
   height: 50px;
   line-height: 50px;
+  position: relative;
   & > span {
     width: 60%;
   }
   &:hover {
+    // border-left: 4px solid #8394c0;
     cursor: pointer;
     // background: rgb(136, 158, 201);
-    color: rgba(255, 255, 255, 0.6);
+    // color: rgba(255, 255, 255, 0.6);
     span {
-      color: rgba(255, 255, 255, 0.6);
+      // color: #8394c0;
+      transform: translateX(2px);
     }
   }
 }
+li::after {
+  position: absolute;
+  bottom: 1px;
+  right: 50%;
+  content: "";
+  height: 2px;
+  width: 0px;
+  transition: 0.5s;
+  // background: #8394c0;
+  background: rgba(107, 114, 128,.3);
+}
+li:hover::after {
+  width: 40%;
+}
+li::before {
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  content: "";
+  height: 2px;
+  width: 0;
+  transition: 0.5s;
+  // background: #8394c0;
+  background: rgba(107, 114, 128,.3);
+}
+li:hover::before {
+  width: 30%;
+}
 .activePath {
-  background: #889ec9 !important;
+  background: #8394c0 !important;
   // background: rgba(136,158,201,.4);
   span {
     color: rgba(255, 255, 255, 0.6);

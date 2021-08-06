@@ -1,7 +1,12 @@
 <template>
   <div class="container w-full h-full">
     <div class="content_box w-full">
-      <router-view></router-view>
+      <div class="header w-full flex justify-center items-center">
+        <Search />
+      </div>
+      <div class="router_view_box">
+        <router-view></router-view>
+      </div>
     </div>
     <footer class="flex justify-center items-center">
       <div class="flex justify-center items-center">
@@ -14,7 +19,9 @@
           target="_blank"
         >
           <img src="@/assets/images/gongan.png" alt />
-          <span class="ml-1 text-sm text-gray-500">粤公网安备44162402000025号</span>
+          <span class="ml-1 text-sm text-gray-500"
+            >粤公网安备44162402000025号</span
+          >
         </a>
       </div>
     </footer>
@@ -22,23 +29,34 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent } from "vue";
+import Search from "@/components/search/Search.vue";
 export default defineComponent({
-  name: 'App',
+  name: "App",
   setup() {
-    return
-  }
-})
+    return;
+  },
+  components: {
+    Search,
+  },
+});
 </script>
 
 <style lang="scss" scoped>
 .container {
   user-select: none;
 }
+.header {
+  height: 60px;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
 .content_box {
   height: calc(100% - 40px);
   overflow-y: scroll;
   padding-left: 10px;
+}
+.router_view_box {
+  height: calc(100% - 60px);
 }
 footer {
   height: 40px;

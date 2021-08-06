@@ -1,60 +1,84 @@
 <template>
-  <div class="container h-full">
-    <div class="header w-full flex justify-center items-center">
-      <Search />
-    </div>
-    <div class="bottom px-4 pt-2 flex items-center h-full">
-      <div class="flex items-center justify-around w-full">
-        <div class="sort item_box px-2">
-          <div class="font-bold text-left">点击排行</div>
-          <div
-            class="item duration-500 flex items-center py-2"
-            v-for="item in 10"
-            :key="item"
+  <div class="container px-4 pt-2 flex items-center h-full">
+    <div class="flex items-center justify-around w-full">
+      <div class="sort item_box px-2">
+        <div class="font-bold text-left">点击排行</div>
+        <div
+          class="item duration-500 flex items-center py-2"
+          v-for="item in 10"
+          :key="item"
+        >
+          <span
+            class="
+              sort_num
+              iconfont
+              icon-toptenbands_icon_king
+              jin
+              justify-center
+            "
+            v-if="item == 1"
+          ></span>
+          <span
+            class="
+              sort_num
+              iconfont
+              icon-toptenbands_icon_king
+              yin
+              justify-center
+            "
+            v-else-if="item == 2"
+          ></span>
+          <span
+            class="
+              sort_num
+              iconfont
+              icon-toptenbands_icon_king
+              tong
+              justify-center
+            "
+            v-else-if="item == 3"
+          ></span>
+          <span class="sort_num text-gray-600 justify-center" v-else>{{
+            item
+          }}</span>
+          <span class="content text-gray-600"
+            >uni-app蓝牙对接热敏打印机阿斯顿发送到发</span
           >
-            <span
-              class="sort_num iconfont icon-toptenbands_icon_king jin justify-center"
-              v-if="item == 1"
-            ></span>
-            <span
-              class="sort_num iconfont icon-toptenbands_icon_king yin justify-center"
-              v-else-if="item == 2"
-            ></span>
-            <span
-              class="sort_num iconfont icon-toptenbands_icon_king tong justify-center"
-              v-else-if="item == 3"
-            ></span>
-            <span class="sort_num text-gray-600 justify-center" v-else>{{ item }}</span>
-            <span class="content text-gray-600"
-              >uni-app蓝牙对接热敏打印机阿斯顿发送到发</span
-            >
-            <span class="click text-gray-500 pl-2 items-center">
- <i class="iconfont icon-liulanliang1 pr-1"></i><span style="font-size: 14px;">200</span></span>
-          </div>
+          <span class="click text-gray-500 pl-2 items-center">
+            <i class="iconfont icon-liulanliang1 pr-1"></i
+            ><span style="font-size: 14px">200</span></span
+          >
         </div>
-        <div class="date item_box px-2">
-          <div class="font-bold text-left">最近更新</div>
-          <div
-            class="item duration-500 flex items-center py-2"
-            v-for="item in 10"
-            :key="item"
+      </div>
+      <div class="date item_box px-2">
+        <div class="font-bold text-left">最近更新</div>
+        <div
+          class="item duration-500 flex items-center py-2"
+          v-for="item in 10"
+          :key="item"
+        >
+          <span
+            class="sort_num iconfont icon-zuixin2 justify-center"
+            v-if="item == 1"
+          ></span>
+          <span
+            class="sort_num iconfont icon-zuixin2 justify-center"
+            v-else-if="item == 2"
+          ></span>
+          <span
+            class="sort_num iconfont icon-zuixin2 justify-center"
+            v-else-if="item == 3"
+          ></span>
+          <span class="sort_num text-gray-600 justify-center" v-else>{{
+            item
+          }}</span>
+          <span class="content text-gray-600"
+            >uni-app蓝牙对接热敏打印机阿斯顿发送到发</span
           >
-            <span
-              class="sort_num iconfont icon-zuixin2 justify-center"
-              v-if="item == 1"
-            ></span>
-            <span
-              class="sort_num iconfont icon-zuixin2 justify-center"
-              v-else-if="item == 2"
-            ></span>
-            <span
-              class="sort_num iconfont icon-zuixin2 justify-center"
-              v-else-if="item == 3"
-            ></span>
-            <span class="sort_num text-gray-600 justify-center" v-else>{{ item }}</span>
-            <span class="content text-gray-600">uni-app蓝牙对接热敏打印机阿斯顿发送到发</span>
-            <span class="click text-gray-500 pl-2 flex items-center"><i class="iconfont icon-riqi1 pr-1" style="fontSize:14px"></i><span style="font-size: 14px;">2020-12-12</span></span>
-          </div>
+          <span class="click text-gray-500 pl-2 flex items-center"
+            ><i class="iconfont icon-riqi1 pr-1" style="fontsize: 14px"></i
+            ><span style="font-size: 14px">2020-12-12</span></span
+          >
         </div>
       </div>
     </div>
@@ -63,26 +87,17 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Search from "@/components/search/Search.vue";
+
 export default defineComponent({
   name: "Article",
   setup() {
     return;
   },
-  components: {
-    Search,
-  },
+ 
 });
 </script>
 
 <style lang="scss" scoped>
-.header {
-  height: 60px;
-  border-bottom: 1px solid rgb(235, 235, 235);
-}
-.bottom {
-  height: calc(100% - 60px);
-}
 .item_box {
   // background: rgba(255, 255, 255, 0.1);
   // box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
@@ -124,10 +139,10 @@ export default defineComponent({
 .icon-zuixin2 {
   color: red;
 }
-.icon-liulanliang1{
+.icon-liulanliang1 {
   font-size: 15px !important;
 }
-.icon-riqi1{
+.icon-riqi1 {
   font-size: 15px !important;
 }
 </style>
