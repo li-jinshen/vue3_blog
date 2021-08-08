@@ -4,7 +4,7 @@
       <p class="flex items-start iconfont icon-iconheji-" style="font-size:25px;margin-right:10px"></p>
       <p
         class="text-left text-gray-500"
-      >温馨提示：以下推荐的插件适用于Google Chrome 网络浏览器（360浏览器也可以安装，但是推荐使用Google Chrome 网络浏览器），请先下载Google Chrome 网络浏览器。下载插件和脚本时，请点击下面对应的下载地址跳转到相应的网站下载，点击下面的插件名称即可复制，复制后可在下载的网站中进行搜索</p>
+      >温馨提示：以下推荐的插件适用于Google Chrome 网络浏览器（360浏览器也可以安装，但是推荐使用Google Chrome 网络浏览器），请先下载Google Chrome 网络浏览器。下载插件和脚本时，请点击下面对应的下载地址跳转到相应的网站下载，点击下面的插件名称即可复制，复制后可在下载的网站中进行搜索，安装脚本需先下载安装Tampermonkey插件</p>
     </div>
     <div class="browser_box rounded flex justify-between items-center p-2 mt-4">
       <div class="flex justify-center items-center">
@@ -18,9 +18,9 @@
     <div class="flex items-cetner justify-between mt-6">
       <div class="flex justify-center items-center title">插件</div>
       <div class="address_box flex justify-end items-center">
-        <a href="https://chrome.google.com/" target="_blank" class="text-gray-500">下载地址</a>
-        <a href="http://www.crx4.com/" target="_blank" class="px-2 text-gray-500">备用地址1</a>
-        <a href="https://www.extfans.com//" target="_blank" class="text-gray-500">备用地址2</a>
+        <a href="https://chrome.google.com" target="_blank" class="text-gray-500">下载地址</a>
+        <a href="http://www.crx4.com" target="_blank" class="px-2 text-gray-500">备用地址1</a>
+        <a href="https://www.extfans.com" target="_blank" class="text-gray-500">备用地址2</a>
         <a href="http://www.crx4.com/507.html" target="_blank" class="text-gray-500 pl-4">插件安装教程</a>
       </div>
     </div>
@@ -58,6 +58,7 @@
 </template>
 
 <script lang="ts">
+import createMessage from '@/components/Message/index'
 import { defineComponent, reactive } from 'vue'
 export default defineComponent({
   name: 'Browser',
@@ -110,9 +111,14 @@ export default defineComponent({
         var msg = successful
           ? '成功复制到剪贴板'
           : '该浏览器不支持点击复制到剪贴板'
-        alert(msg)
+        // alert(msg)
+        createMessage({ type: 'default', message: msg })
       } catch (err) {
-        alert('该浏览器不支持点击复制到剪贴板')
+        // alert('该浏览器不支持点击复制到剪贴板')
+        createMessage({
+          type: 'error',
+          message: '该浏览器不支持点击复制到剪贴板'
+        })
       }
       textArea.remove()
     }

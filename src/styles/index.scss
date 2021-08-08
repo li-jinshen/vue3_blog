@@ -9,6 +9,30 @@
 :root {
   --primary: #8394c0;
   --borderLightColor: #ebeef5;
+
+  --theme-main: #2f3e4c;
+  --theme-success: #52de97;
+  --theme-danger: rgba(52, 94, 185, 0.6);
+  --theme-info: #9ed0ff;
+  --theme-wrning: #ffdd98;
+  --color-text: #2f3e4c;
+  --color-text-placeholder: #2f3e4c;
+  --color-mark-title: #2f3e4c;
+  --color-mark-title-hover: rgba(36, 138, 112, 0.3);
+  --color-label-title: #3f1661;
+  --color-label-title-hover: rgba(85, 43, 184, 0.2);
+  --color-label-title-click: rgba(85, 43, 184, 0.4);
+  --color-label-color-hover: rgb(209, 152, 87);
+
+  --button-bg-color: rgba(16, 143, 111, 0.3);
+  --glassmorphism-rgb: 255, 255, 255;
+  --glassmorphism-opacity: 0.25;
+  --glassmorphism-rgba: rgba(
+    var(--glassmorphism-rgb),
+    var(--glassmorphism-opacity)
+  );
+  --glassmorphism-filter: blur(10px);
+  --glassmorphism-radius: 10px;
 }
 
 * {
@@ -71,5 +95,42 @@ body {
   }
   &:hover img {
     transform: scale(1.3);
+  }
+}
+
+.rectangle {
+  background: rgba(255, 255, 255, 0.55);
+  width: 45%;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 20px 0 rgba(31, 38, 135, 0.37);
+  }
+  .rectangle_left {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .rectangle_right {
+    width: calc(100% - 110px);
+  }
+  .rectangle_title {
+    font-size: 25px;
+  }
+  .rectangle_msg {
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    width: 100%;
   }
 }

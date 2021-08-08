@@ -26,7 +26,7 @@ export type MessageList = MessageOptions[];
 // 存放所有的message实例  用来计算偏移量
 const instances = reactive<VNode[]>([]);
 const offsetNumber = computed(() => instances.length + 1);
-const createMessage = (options: MessageParams) => {
+const createMessage = (options: MessageParams): void => {
   // 如果参数是string类型,就把它转换为options对象
   if (typeof options === 'string') {
     options = {

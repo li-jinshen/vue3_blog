@@ -39,7 +39,16 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
           pageIndex: 5,
         }
-      }
+      },
+      {
+        path: "resources",
+        name: "Resources",
+        component: () => import('../views/home/pages/Resources.vue'),
+        meta: {
+          pageIndex: 6,
+        }
+      },
+
     ]
   },
 

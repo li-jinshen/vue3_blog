@@ -6,4 +6,6 @@ import "./assets/css/reset.css"
 import "./assets/css/tailwind.css"
 import "@/styles/index.scss";
 
+
+
 createApp(App).use(store).use(router).mount('#app')

@@ -1,4 +1,3 @@
-
 //淡入淡出
 .base-enter-active,
 .base-leave-active {
@@ -28,7 +27,6 @@
   opacity: 0;
 }
 
-
 //message
 .message-enter-active,
 .message-leave-active {
@@ -40,6 +38,6 @@
 }
 .message-enter-from,
 .message-leave-to {
-  transform: translate(-50%,-100%);
+  transform: translate(-50%, -100%);
   opacity: 0;
 }
