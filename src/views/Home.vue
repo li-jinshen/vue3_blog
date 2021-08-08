@@ -1,8 +1,8 @@
 <template>
-  <div class="home w-full h-full relative">
+  <div class="home w-full h-full flex justify-center items-center">
     <TabsList></TabsList>
-    <div class="box flex items-center absolute top-1/2 left-1/2">
-      <div class="left">
+    <div class="box flex items-center">
+      <div class="left h-full">
         <div class="info rounded">
           <info></info>
         </div>
@@ -42,11 +42,16 @@ export default defineComponent({
     no-repeat;
   background-size: cover;
   .box {
-    height: 600px;
-    transform: translate(-50%, -50%);
+    min-height: 600px;
+    max-height: 650px;
+    height: 90%;
+    width: 80%;
+    min-width: 990px;
+    max-width: 1100px;
     .left {
+      height: 100%;
+      width: 200px;
       & > div {
-        width: 200px;
         background: rgba(255, 255, 255, 0.4);
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
         backdrop-filter: blur(13.5px);
@@ -57,14 +62,16 @@ export default defineComponent({
         height: 180px;
       }
       .menu {
-        height: 410px;
+        height: calc(100% - 190px);
         margin-top: 10px;
       }
     }
     .right {
-      width: 790px;
+      // display: flex;
+      // flex: auto;
       margin-left: 10px;
       height: 100%;
+      width: calc(100% - 190px);
       background: rgba(255, 255, 255, 0.4);
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       backdrop-filter: blur(13.5px);

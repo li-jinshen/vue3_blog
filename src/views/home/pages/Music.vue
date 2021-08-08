@@ -1,5 +1,5 @@
 <template>
-  <div class="music pt-6 flex items-center flex-wrap">
+  <div class="music pt-4 flex items-center flex-wrap">
     <div
       class="square flex justify-center items-center mb-6"
       v-for="(item,index) in list"

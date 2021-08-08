@@ -6,6 +6,10 @@
  * @FilePath: \warbler-homepage\src\styles\index.scss
  */
 @import "./transition_vue.scss";
+:root {
+  --primary: #8394c0;
+  --borderLightColor: #ebeef5;
+}
 
 * {
   margin: 0;
@@ -46,11 +50,6 @@ body {
   100% {
     background-position: 100% 100%;
   }
-}
-
-:root {
-  --primary: #8394c0;
-  --borderLightColor: #ebeef5;
 }
 
 // square的样式

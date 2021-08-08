@@ -31,6 +31,14 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
           pageIndex: 3,
         }
+      },
+      {
+        path: "browser",
+        name: "Browser",
+        component: () => import('../views/home/pages/Browser.vue'),
+        meta: {
+          pageIndex: 5,
+        }
       }
     ]
   },

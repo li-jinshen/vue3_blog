@@ -58,7 +58,7 @@ export default defineComponent({
         title: '浏览器插件',
         icon: 'iconfont icon-chajian2',
         size: 16,
-        href: '/blog/home/plug'
+        href: '/blog/home/browser'
       },
       {
         title: '资源网站',
