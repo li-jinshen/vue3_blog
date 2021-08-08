@@ -3,82 +3,47 @@
     <div class="flex items-center justify-around w-full">
       <div class="sort item_box px-2">
         <div class="font-bold text-left">点击排行</div>
-        <div
-          class="item duration-500 flex items-center py-2"
-          v-for="item in 10"
-          :key="item"
-        >
+        <div class="item duration-500 flex items-center py-2" v-for="item in 10" :key="item">
           <span
-            class="
-              sort_num
-              iconfont
-              icon-toptenbands_icon_king
-              jin
-              justify-center
-            "
+            class="sort_num iconfont icon-toptenbands_icon_king jin justify-center"
             v-if="item == 1"
           ></span>
           <span
-            class="
-              sort_num
-              iconfont
-              icon-toptenbands_icon_king
-              yin
-              justify-center
-            "
+            class="sort_num iconfont icon-toptenbands_icon_king yin justify-center"
             v-else-if="item == 2"
           ></span>
           <span
-            class="
-              sort_num
-              iconfont
-              icon-toptenbands_icon_king
-              tong
-              justify-center
-            "
+            class="sort_num iconfont icon-toptenbands_icon_king tong justify-center"
             v-else-if="item == 3"
           ></span>
-          <span class="sort_num text-gray-600 justify-center" v-else>{{
+          <span class="sort_num text-gray-600 justify-center" v-else>
+            {{
             item
-          }}</span>
-          <span class="content text-gray-600"
-            >uni-app蓝牙对接热敏打印机阿斯顿发送到发</span
-          >
+            }}
+          </span>
+          <span class="content text-gray-600">uni-app蓝牙对接热敏打印机阿斯顿发送到发</span>
           <span class="click text-gray-500 pl-2 items-center">
-            <i class="iconfont icon-liulanliang1 pr-1"></i
-            ><span style="font-size: 14px">200</span></span
-          >
+            <i class="iconfont icon-liulanliang1 pr-1"></i>
+            <span style="font-size: 14px">200</span>
+          </span>
         </div>
       </div>
       <div class="date item_box px-2">
         <div class="font-bold text-left">最近更新</div>
-        <div
-          class="item duration-500 flex items-center py-2"
-          v-for="item in 10"
-          :key="item"
-        >
-          <span
-            class="sort_num iconfont icon-zuixin2 justify-center"
-            v-if="item == 1"
-          ></span>
-          <span
-            class="sort_num iconfont icon-zuixin2 justify-center"
-            v-else-if="item == 2"
-          ></span>
-          <span
-            class="sort_num iconfont icon-zuixin2 justify-center"
-            v-else-if="item == 3"
-          ></span>
-          <span class="sort_num text-gray-600 justify-center" v-else>{{
+        <div class="item duration-500 flex items-center py-2" v-for="item in 10" :key="item">
+          <span class="sort_num iconfont icon-zuixin2 justify-center" v-if="item == 1"></span>
+          <span class="sort_num iconfont icon-zuixin2 justify-center" v-else-if="item == 2"></span>
+          <span class="sort_num iconfont icon-zuixin2 justify-center" v-else-if="item == 3"></span>
+          <span class="sort_num text-gray-600 justify-center" v-else>
+            {{
             item
-          }}</span>
-          <span class="content text-gray-600"
-            >uni-app蓝牙对接热敏打印机阿斯顿发送到发</span
-          >
-          <span class="click text-gray-500 pl-2 flex items-center"
-            ><i class="iconfont icon-riqi1 pr-1" style="fontsize: 14px"></i
-            ><span style="font-size: 14px">2020-12-12</span></span
-          >
+            }}
+          </span>
+          <span class="content text-gray-600">uni-app蓝牙对接热敏打印机阿斯顿发送到发</span>
+          <span class="click text-gray-500 pl-2 flex items-center">
+            <i class="iconfont icon-riqi1 pr-1" style="fontsize: 14px"></i>
+            <span style="font-size: 14px">2020-12-12</span>
+          </span>
         </div>
       </div>
     </div>
@@ -86,15 +51,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: "Article",
+  name: 'Article',
   setup() {
-    return;
-  },
- 
-});
+    return
+  }
+})
 </script>
 
 <style lang="scss" scoped>

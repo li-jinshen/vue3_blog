@@ -5,13 +5,12 @@
  * @LastEditTime: 2021-05-17 19:47:13
  * @FilePath: \warbler-homepage\src\styles\index.scss
  */
-@import './transition_vue.scss';
+@import "./transition_vue.scss";
 
 * {
   margin: 0;
   padding: 0;
 }
-
 
 a {
   text-decoration: none;
@@ -37,7 +36,6 @@ body {
   // animation: gradient-move 5s ease infinite alternate;
   // color: var(--color-text);
   font-family: Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
-
 }
 
 @keyframes gradient-move {
@@ -52,5 +50,27 @@ body {
 
 :root {
   --primary: #8394c0;
-  --borderLightColor:#EBEEF5;
+  --borderLightColor: #ebeef5;
+}
+
+// square的样式
+.square {
+  width: 25%;
+  .square_icon {
+    width: 110px;
+    height: 110px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+  }
+  .square_text {
+    font-size: 14px;
+    transition: 0.5s;
+  }
+  &:hover img {
+    transform: scale(1.3);
+  }
 }
