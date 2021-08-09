@@ -33,6 +33,14 @@ const routes: Array<RouteRecordRaw> = [
         }
       },
       {
+        path: "front",
+        name: "Front",
+        component: () => import('../views/home/pages/Front.vue'),
+        meta: {
+          pageIndex: 3,
+        }
+      },
+      {
         path: "browser",
         name: "Browser",
         component: () => import('../views/home/pages/Browser.vue'),
