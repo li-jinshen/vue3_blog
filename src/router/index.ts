@@ -37,7 +37,7 @@ const routes: Array<RouteRecordRaw> = [
         name: "Front",
         component: () => import('../views/home/pages/Front.vue'),
         meta: {
-          pageIndex: 3,
+          pageIndex: 4,
         }
       },
       {
@@ -49,11 +49,43 @@ const routes: Array<RouteRecordRaw> = [
         }
       },
       {
+        path: "tool",
+        name: "Tool",
+        component: () => import('../views/home/pages/Tool.vue'),
+        meta: {
+          pageIndex: 6,
+        }
+      },
+      {
         path: "resources",
         name: "Resources",
         component: () => import('../views/home/pages/Resources.vue'),
         meta: {
-          pageIndex: 6,
+          pageIndex: 7,
+        }
+      },
+      {
+        path: "navigation",
+        name: "Navigation",
+        component: () => import('../views/home/pages/Navigation.vue'),
+        meta: {
+          pageIndex: 8,
+        }
+      },
+      {
+        path: "search",
+        name: "Search",
+        component: () => import('../views/home/pages/Search.vue'),
+        meta: {
+          pageIndex: 9,
+        }
+      },
+      {
+        path: "link",
+        name: "Link",
+        component: () => import('../views/home/pages/Link.vue'),
+        meta: {
+          pageIndex: 9,
         }
       },
 
