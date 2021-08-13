@@ -30,15 +30,15 @@
     setup() {
       let resousrcesList: Resources[] = reactive([
         {
-          icon: require('assets/images/navigation/catdog.png'),
-          name: '阿猫阿狗导航',
-          href: 'https://dh.woshipm.com/',
-          type:"多类型"
-        },
-        {
           icon: require('assets/images/navigation/xueba.png'),
           name: '学吧导航',
           href: 'https://www.xue8nav.com/',
+          type:"多类型"
+        },
+        {
+          icon: require('assets/images/navigation/catdog.png'),
+          name: '阿猫阿狗导航',
+          href: 'https://dh.woshipm.com/',
           type:"多类型"
         },
         {
