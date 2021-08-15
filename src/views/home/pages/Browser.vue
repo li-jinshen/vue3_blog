@@ -34,7 +34,9 @@
         v-for="(item,index) in plug"
         :key="index"
         @click="copyToClipboard(item)"
-      >{{index+1}}.{{item}}</div>
+      >
+        <span class="item relative">{{index+1}}.{{item}}</span>
+      </div>
     </div>
     <div class="flex items-cetner justify-between mt-6">
       <div class="flex justify-center items-center title">脚本</div>
@@ -52,7 +54,9 @@
         v-for="(item,index) in script"
         :key="index"
         @click="copyToClipboard(item)"
-      >{{index+1}}.{{item}}</div>
+      >
+        <span class="item relative">{{index+1}}.{{item}}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -196,5 +200,33 @@ export default defineComponent({
     cursor: pointer;
     color: var(--primary);
   }
+}
+.item::after {
+  position: absolute;
+  bottom: -4px;
+  right: 50%;
+  content: '';
+  height: 2px;
+  width: 0px;
+  transition: 0.3s;
+  // background: #8394c0;
+  background: var(--primary);
+}
+.plug_item:hover .item::after {
+  width: 40%;
+}
+.item::before {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  content: '';
+  height: 2px;
+  width: 0;
+  transition: 0.3s;
+  // background: #8394c0;
+  background: var(--primary);
+}
+.plug_item:hover .item::before {
+  width: 50%;
 }
 </style>

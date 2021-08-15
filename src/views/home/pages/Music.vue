@@ -31,64 +31,74 @@
 </template>
   
   <script lang="ts">
-import { defineComponent, reactive } from "vue";
+import { defineComponent, reactive } from 'vue'
 
 interface musicList {
-  icon: string;
-  name: string;
-  href: string;
+  icon: string
+  name: string
+  href: string
 }
 
 export default defineComponent({
-  name: "Music",
+  name: 'Music',
   setup() {
     let list: musicList[] = reactive([
       {
-        icon: require("assets/images/music/myfree.png"),
-        name: "MYFREEMP3",
-        href: "http://tool.liumingye.cn/music/?page=searchPage",
+        // icon: require('assets/images/music/myfree.png'),
+        icon: 'https://z3.ax1x.com/2021/08/14/f6X8iT.png',
+        name: 'MYFREEMP3',
+        href: 'http://tool.liumingye.cn/music/?page=searchPage'
+        // href: 'https://imgtu.com/i/f6OhPU'
       },
       {
-        icon: require("assets/images/music/cichang.png"),
-        name: "音乐磁场",
-        href: "https://www.hifini.com",
+        // icon: require('assets/images/music/cichang.png'),
+        icon: 'https://z3.ax1x.com/2021/08/14/f6X1oV.png',
+        name: '音乐磁场',
+        href: 'https://www.hifini.com'
       },
       {
-        icon: require("assets/images/music/lastfm.png"),
-        name: "Last.Fm",
-        href: "https://www.last.fm",
+        // icon: require('assets/images/music/lastfm.png'),
+        icon: 'https://z3.ax1x.com/2021/08/14/f6XGJU.png',
+        name: 'Last.Fm',
+        href: 'https://www.last.fm'
       },
       {
-        icon: require("assets/images/music/luowang.png"),
-        name: "落网",
-        href: "https://www.indie.cn",
+        // icon: require('assets/images/music/luowang.png'),
+        icon: 'https://z3.ax1x.com/2021/08/14/f6XKLn.png',
+        name: '落网',
+        href: 'https://www.indie.cn'
       },
       {
-        icon: require("assets/images/music/streetvoice.png"),
-        name: "streetVoice",
-        href: "https://streetvoice.cn",
+        // icon: require('assets/images/music/streetvoice.png'),
+        icon: 'https://z3.ax1x.com/2021/08/14/f6XYz4.png',
+        name: 'streetVoice',
+        // href: 'https://streetvoice.cn'
+        href: 'https://imgtu.com/i/f6OW5T'
       },
       {
-        icon: require("assets/images/music/maitian.png"),
-        name: "麦田音乐",
-        href: "https://www.mtyyw.com",
+        // icon: require('assets/images/music/maitian.png'),
+        icon: 'https://z3.ax1x.com/2021/08/14/f6Xld0.png',
+        name: '麦田音乐',
+        href: 'https://www.mtyyw.com'
       },
       {
-        icon: require("assets/images/music/shenlin.png"),
-        name: "影音森林",
-        href: "http://www.549.tv/#",
+        // icon: require('assets/images/music/shenlin.png'),
+        icon: 'https://z3.ax1x.com/2021/08/14/f6XJWF.png',
+        name: '影音森林',
+        href: 'http://www.549.tv/#'
       },
       {
-        icon: require("assets/images/music/zhangku.jpeg"),
-        name: "掌酷",
-        href: "https://www.zkdh.net/",
-      },
-    ]);
+        // icon: require('assets/images/music/zhangku.jpeg'),
+        icon: 'https://z3.ax1x.com/2021/08/14/f6XNQJ.jpg',
+        name: '掌酷',
+        href: 'https://www.zkdh.net/'
+      }
+    ])
     return {
-      list,
-    };
-  },
-});
+      list
+    }
+  }
+})
 </script>
   
   <style lang="scss" scoped>

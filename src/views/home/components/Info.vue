@@ -7,7 +7,8 @@
         </div>
         <div class="dsc">
           <p class="font-bold text-2xl text-left">深</p>
-          <p class="text-left mt-4 text-sm">前端工程师</p>
+          <p class="text-left my-2 text-sm">前端工程师</p>
+          <p class="text-left text-sm">90后</p>
         </div>
       </div>
       <div

@@ -49,7 +49,7 @@ export default defineComponent({
         href: '/blog/home/music'
       },
       {
-        title: '前端工具库',
+        title: '学习网站',
         icon: 'iconfont icon-_fuzhi',
         size: 18,
         href: '/blog/home/front'
