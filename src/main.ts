@@ -5,7 +5,8 @@ import store from './store'
 import "./assets/css/reset.css"
 import "./assets/css/tailwind.css"
 import "@/styles/index.scss";
+import ImageItem from "@/components/ImageItem/ImageItem.vue"
 
 
 
-createApp(App).use(store).use(router).mount('#app')
+createApp(App).component('ImageItem', ImageItem).use(store).use(router).mount('#app')

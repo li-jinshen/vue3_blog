@@ -7,7 +7,8 @@
       @click="openAddress(item.href)"
     >
       <div class="rectangle_left rounded-lg">
-        <img :src="item.icon" alt />
+        <!-- <img :src="item.icon" alt /> -->
+        <ImageItem :url="item.icon" width="90" height="90"></ImageItem>
       </div>
       <div class="rectangle_right">
         <p class="rectangle_title text-gray-600 text-xl text-left">{{item.name}}</p>

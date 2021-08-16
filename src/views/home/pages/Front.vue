@@ -9,9 +9,10 @@
       >
         <div>
           <a :href="item.href" target="_blank">
-            <div class="square_icon rounded-lg">
+            <!-- <div class="square_icon rounded-lg">
               <img :src="item.icon" alt />
-            </div>
+            </div>-->
+            <ImageItem :url="item.icon" width="110" height="110" :scale="true"></ImageItem>
             <div class="square_text mt-2 text-gray-500">{{ item.name }}</div>
           </a>
         </div>

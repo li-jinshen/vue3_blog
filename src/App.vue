@@ -5,26 +5,25 @@
 
 
   <script lang="ts">
-
-import { defineComponent, onMounted } from "vue";
-declare let returnCitySN:any;
+import { defineComponent, onMounted } from 'vue'
+declare let returnCitySN: any
 export default defineComponent({
-  name: "Article",
+  name: 'Article',
   setup() {
     onMounted(() => {
       console.log(returnCitySN)
       console.log(
-        "IP地址:" +
-          returnCitySN["cip"] +
-          ", CID:" +
-          returnCitySN["cid"] +
-          ", 地区:" +
-          returnCitySN["cname"]
-      );
-    });
-    return;
-  },
-});
+        'IP地址:' +
+          returnCitySN['cip'] +
+          ', CID:' +
+          returnCitySN['cid'] +
+          ', 地区:' +
+          returnCitySN['cname']
+      )
+    })
+    return
+  }
+})
 </script>
     
 
