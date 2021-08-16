@@ -1,6 +1,32 @@
+
 <template>
   <router-view></router-view>
 </template>
+
+
+  <script lang="ts">
+
+import { defineComponent, onMounted } from "vue";
+declare let returnCitySN:any;
+export default defineComponent({
+  name: "Article",
+  setup() {
+    onMounted(() => {
+      console.log(returnCitySN)
+      console.log(
+        "IP地址:" +
+          returnCitySN["cip"] +
+          ", CID:" +
+          returnCitySN["cid"] +
+          ", 地区:" +
+          returnCitySN["cname"]
+      );
+    });
+    return;
+  },
+});
+</script>
+    
 
 <style lang="scss">
 @import url('https://at.alicdn.com/t/font_2715113_rixcs9k7c4j.css');

@@ -51,6 +51,7 @@ export default defineComponent({
     .left {
       height: 100%;
       width: 200px;
+      z-index: 100;
       & > div {
         background: rgba(255, 255, 255, 0.4);
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
