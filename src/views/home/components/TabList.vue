@@ -125,7 +125,7 @@ export default defineComponent({
   border-radius: 4px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   z-index: 999;
-  // min-width: 90px;
+  min-width: 90px;
   white-space: nowrap;
 }
 

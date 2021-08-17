@@ -51,6 +51,7 @@ export default defineComponent({
   width: 180px;
 }
 .msg_box {
+
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box; //作为弹性伸缩盒子模型显示。

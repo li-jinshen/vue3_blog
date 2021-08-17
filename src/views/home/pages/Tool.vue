@@ -49,6 +49,12 @@ export default defineComponent({
         desc: '好用的截图、录屏软件（提取码：sl9y）'
       },
       {
+        icon: 'https://z3.ax1x.com/2021/08/17/f5noRI.jpg',
+        name: 'IT宝盒',
+        href: '',
+        desc: '微信公众号，免费提供各类软件安装包和安装教程、技术书籍、视频教程'
+      },
+      {
         icon: 'https://z3.ax1x.com/2021/08/15/fcQDW8.png',
         name: '稿定设计',
         href: 'https://ps.gaoding.com/#/',
@@ -80,7 +86,8 @@ export default defineComponent({
       }
     ]
     function openAddress(href: string): void {
-      window.open(href)
+      href!=''?window.open(href):""
+      
     }
     return {
       list,
